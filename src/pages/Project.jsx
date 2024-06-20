@@ -111,7 +111,7 @@ export const Project = () => {
 
       <div className="w-full pt-8  gap-x-8 gap-y-8 grid grid-cols-2">
         {/* pg 1 */}
-        <div className="flex flex-col shadow-lg shadow-slate-100 rounded-lg border-gray-200 border group overflow-hidden">
+        <a href="https://github.com/abi-widiarta/project-odin-etchASketch" target="_blank" className="flex flex-col shadow-lg shadow-slate-100 rounded-lg border-gray-200 border group overflow-hidden">
           <img className="object-cover h-44 w-full group-hover:scale-110 transition-all" src="/pg-1.png" alt="" />
           <div className="p-4 flex-1 flex flex-col justify-between">
             <div>
@@ -125,7 +125,7 @@ export const Project = () => {
               <img className="w-6 aspect-auto" src="/icon-js.svg" alt="" />
             </div>
           </div>
-        </div>
+        </a>
 
         {/* pg 2 */}
         <a href="https://github.com/abi-widiarta/not-linktree" className="flex flex-col shadow-lg shadow-slate-100 rounded-lg border-gray-200 border group overflow-hidden">

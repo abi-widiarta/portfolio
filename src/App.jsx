@@ -21,13 +21,13 @@ function App() {
             <h2 className="mt-8 font-semibold">Abi Widiarta</h2>
             <p className="text-sm">front-end web enthuasiast</p>
             <div className="flex gap-2 mt-2">
-              <a href="#">
+              <a target="_blank" href="https://www.instagram.com/abi.widiarta/">
                 <img className="aspect-square w-5" src="/icon-ig.png" alt="" />
               </a>
-              <a href="#">
+              <a target="_blank" href="https://github.com/abi-widiarta">
                 <img className="aspect-square w-5" src="/icon-github.png" alt="" />
               </a>
-              <a href="#">
+              <a target="_blank" href="https://www.linkedin.com/in/abi-widiarta/">
                 <img className="aspect-square w-5" src="/icon-linkedin.png" alt="" />
               </a>
             </div>
