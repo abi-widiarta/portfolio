@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export const About = () => {
   return (
-    <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} className="p-5 pb-20">
+    <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.25, ease: "easeOut" }} className="p-5 pb-20">
       <h1 className="text-2xl font-semibold">About</h1>
       <div className="flex mt-3 space-x-6">
         <div className="flex items-center space-x-2">
@@ -38,10 +38,10 @@ export const About = () => {
 
       {/* Educations */}
       <div className="flex items-center mt-6 space-x-2">
-        <img className="w-8 aspect-auto" src="/icon-tech.png" alt="" />
+        <img className="w-8 aspect-auto dark:invert" src="/icon-tech.png" alt="" />
         <h2 className="text-xl font-semibold">Educations</h2>
       </div>
-      <p className="mt-1 text-gray-600 text-md">My Academic Journey </p>
+      <p className="mt-1 text-gray-600 text-md dark:text-slate-300">My Academic Journey </p>
 
       <div className="flex mt-8 space-x-8">
         <div className="relative flex w-6">
@@ -50,7 +50,9 @@ export const About = () => {
         </div>
 
         <div className="flex items-start pb-16 space-x-8">
-          <img className="w-20 aspect-auto" src="/balihati.jpeg" alt="" />
+          <div className="w-20 overflow-hidden bg-white rounded-lg">
+            <img className="w-20 scale-75 aspect-auto" src="/balihati.jpeg" alt="" />
+          </div>
           <div className="space-y-2">
             <h2 className="text-lg font-semibold">Bali Hati International School</h2>
             <p>Senior High School</p>
@@ -61,17 +63,17 @@ export const About = () => {
 
       <div className="flex space-x-8">
         <div className="relative flex w-6 ">
-          <span className="block h-full w-[2px] bg-gradient-to-b from-slate-300 to-white absolute top-0 left-[50%] -translate-x-[50%]"></span>
+          <span className="block h-full w-[2px] bg-gradient-to-b from-slate-300 to-white dark:to-slate-800 absolute top-0 left-[50%] -translate-x-[50%]"></span>
           <div className="z-20 flex w-6 h-6 rounded-full bg-slate-300 "></div>
         </div>
 
         <div className="flex items-start pb-10 space-x-8">
-          <img className="w-20 scale-150 aspect-auto" src="/telkom.png" alt="" />
+          <div className="bg-white rounded-lg">
+            <img className="w-20 aspect-auto " src="/telkom.png" alt="" />
+          </div>
           <div className="space-y-2">
             <h2 className="text-lg font-semibold">Telkom University</h2>
-            <p>
-              Informatics Faculty <span className="inline-block w-1 h-full bg-black rounded-full"></span> Computer Science GPA : 3.98
-            </p>
+            <p>Informatics Faculty - Computer Science - GPA : 3.98</p>
             <p>2021 - Present</p>
           </div>
         </div>
@@ -80,10 +82,10 @@ export const About = () => {
       <Divider />
       {/* Certificates Projects */}
       <div className="flex items-center mt-6 space-x-2">
-        <img className="w-8 aspect-auto" src="/icon-tech.png" alt="" />
-        <h2 className="text-xl font-semibold">Certificates</h2>
+        <img className="w-8 aspect-auto dark:invert" src="/icon-tech.png" alt="" />
+        <h2 className="text-xl font-semibold ">Certificates</h2>
       </div>
-      <p className="mt-1 text-gray-600 text-md">Certificates I've acquired</p>
+      <p className="mt-1 text-gray-600 text-md dark:text-slate-300">Certificates I've acquired</p>
 
       <div className="flex flex-wrap w-full pt-8 gap-x-8 gap-y-4">
         {/* certificate 1 */}
@@ -93,8 +95,8 @@ export const About = () => {
           <div className="flex flex-col justify-between h-full">
             <div>
               <h3 className="font-medium">Belajar Dasar Pemrograman JavaScript</h3>
-              <p className="text-gray-600">Learn the basic of Javascript syntax and concepts</p>
-              <p className="text-sm text-gray-600">Dicoding</p>
+              <p className="text-gray-600 dark:text-slate-400">Learn the basic of Javascript syntax and concepts</p>
+              <p className="text-sm text-gray-600 dark:text-slate-400">Dicoding</p>
             </div>
 
             <a className="block text-sm transition hover:opacity-70" target="_blank" href="https://www.dicoding.com/certificates/1OP86J7OQXQK">
@@ -110,8 +112,8 @@ export const About = () => {
           <div className="flex flex-col justify-between h-full">
             <div>
               <h3 className="font-medium">Belajar Dasar Pemrograman Web</h3>
-              <p className="text-gray-600">Learn the core concepts of web development including tools and best practices</p>
-              <p className="text-sm text-gray-600">Dicoding</p>
+              <p className="text-gray-600 dark:text-slate-400">Learn the core concepts of web development including tools and best practices</p>
+              <p className="text-sm text-gray-600 dark:text-slate-400">Dicoding</p>
             </div>
 
             <a className="block text-sm transition hover:opacity-70" target="_blank" href="https://www.dicoding.com/certificates/JMZVG1MOOZN9">
@@ -127,8 +129,8 @@ export const About = () => {
           <div className="flex flex-col justify-between h-full">
             <div>
               <h3 className="font-medium">Belajar Membuat Front-End Web untuk Pemula</h3>
-              <p className="text-gray-600">Learn the concepts of front-end web development, including DOM manipulation using Javascript</p>
-              <p className="text-sm text-gray-600">Dicoding</p>
+              <p className="text-gray-600 dark:text-slate-400">Learn the concepts of front-end web development, including DOM manipulation using Javascript</p>
+              <p className="text-sm text-gray-600 dark:text-slate-400">Dicoding</p>
             </div>
 
             <a className="block text-sm transition hover:opacity-70" target="_blank" href="https://www.dicoding.com/certificates/MRZMDWV60ZYQ">

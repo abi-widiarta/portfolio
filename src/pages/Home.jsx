@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 export const Home = () => {
   return (
-    <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} className="p-5 pb-20 overflow-hidden">
+    <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 0.25, ease: "easeOut" }} className="p-5 pb-20 overflow-hidden">
       <h1 className="text-2xl font-semibold">Hi There!, I'm Abi Widiarta</h1>
       <div className="flex mt-3 space-x-6">
         <div className="flex items-center space-x-2">
@@ -27,10 +27,10 @@ export const Home = () => {
 
       {/* Tech Stacks */}
       <div className="flex items-center mt-6 space-x-2">
-        <img className="w-8 aspect-auto" src="/icon-tech.png" alt="" />
+        <img className="w-8 aspect-auto dark:invert" src="/icon-tech.png" alt="" />
         <h2 className="text-xl font-semibold">Tech Stacks</h2>
       </div>
-      <p className="mt-1 text-gray-600 text-md">Programming Languages and Tools I Used</p>
+      <p className="mt-1 text-gray-600 text-md dark:text-slate-300">Programming Languages and Tools I Used</p>
       <div className="flex flex-wrap pt-8 pb-4 gap-x-6 gap-y-8">
         <div className="flex items-center space-x-2">
           <img className="w-6 rounded-md aspect-auto" src="/icon-html.svg" alt="" />
@@ -73,19 +73,19 @@ export const Home = () => {
       <Divider />
       {/* Featured Projects */}
       <div className="flex items-center mt-6 space-x-2">
-        <img className="w-8 aspect-auto" src="/icon-tech.png" alt="" />
-        <h2 className="text-xl font-semibold">Featured Projects</h2>
+        <img className="w-8 aspect-auto dark:invert" src="/icon-tech.png" alt="" />
+        <h2 className="text-xl font-semibold ">Featured Projects</h2>
       </div>
-      <p className="mt-1 text-gray-600 text-md">Projects I've created</p>
+      <p className="mt-1 text-gray-600 text-md dark:text-slate-300">Projects I've created</p>
 
       <div className="grid w-full grid-cols-2 pt-8 gap-x-8 gap-y-8">
         {/* project 1 */}
-        <a href="https://github.com/abi-widiarta/bookrent_laravel" target="_blank" className="flex flex-col overflow-hidden border border-gray-200 rounded-lg shadow-lg shadow-slate-100 group">
+        <a href="https://github.com/abi-widiarta/bookrent_laravel" target="_blank" className="flex flex-col overflow-hidden border border-gray-200 rounded-lg shadow-lg shadow-slate-100 group dark:shadow-slate-800 dark:border-slate-700">
           <img className="object-cover w-full transition-all h-44 group-hover:scale-110" src="/project-2.png" alt="" />
           <div className="flex flex-col justify-between flex-1 p-4">
             <div>
               <h3 className="mb-2 font-semibold">OpenLibrary Book Rent</h3>
-              <p className="text-sm text-gray-500">Website for book renting system in telkom university utilizing Laravel, Tailwind CSS and responsive design</p>
+              <p className="text-sm text-gray-500 dark:text-slate-300">Website for book renting system in telkom university utilizing Laravel, Tailwind CSS and responsive design</p>
             </div>
 
             <div className="flex mt-6 space-x-4">
@@ -96,12 +96,12 @@ export const Home = () => {
         </a>
 
         {/* project 2 */}
-        <a href="https://github.com/abi-widiarta/rpl-mytelkomedika" target="_blank" className="flex flex-col overflow-hidden border border-gray-200 rounded-lg shadow-lg shadow-slate-100 group">
+        <a href="https://github.com/abi-widiarta/rpl-mytelkomedika" target="_blank" className="flex flex-col overflow-hidden border border-gray-200 rounded-lg shadow-lg shadow-slate-100 group dark:shadow-slate-800 dark:border-slate-700">
           <img className="object-cover w-full transition-all h-44 group-hover:scale-110" src="/project-1.png" alt="" />
           <div className="flex flex-col justify-between flex-1 p-4">
             <div>
               <h3 className="mb-2 font-semibold">MyTelkomedika</h3>
-              <p className="text-sm text-gray-500">Information system website for telkomedika clinic in Telkom University with Laravel and TailwindCSS</p>
+              <p className="text-sm text-gray-500 dark:text-slate-300">Information system website for telkomedika clinic in Telkom University with Laravel and TailwindCSS</p>
             </div>
 
             <div className="flex mt-6 space-x-4">
@@ -112,19 +112,19 @@ export const Home = () => {
         </a>
 
         {/* project 3 */}
-        <a target="_blank" href="https://github.com/abi-widiarta/react-with-pokeapi" className="flex flex-col overflow-hidden border border-gray-200 rounded-lg shadow-lg shadow-slate-100 group">
+        <a target="_blank" href="https://github.com/abi-widiarta/react-with-pokeapi" className="flex flex-col overflow-hidden border border-gray-200 rounded-lg shadow-lg shadow-slate-100 group dark:shadow-slate-800 dark:border-slate-700">
           <img className="object-cover w-full transition-all h-44 group-hover:scale-110" src="/project-3.png" alt="" />
           <div className="flex flex-col justify-between flex-1 p-4">
             <div>
               <h3 className="mb-2 font-semibold">Pokemon PokeAPI</h3>
-              <p className="text-sm text-gray-500">Website that fetched data from PokeAPI with cart system using redux for state management</p>
+              <p className="text-sm text-gray-500 dark:text-slate-300">Website that fetched data from PokeAPI with cart system using redux for state management</p>
             </div>
 
             <div className="flex mt-6 space-x-4">
               <img className="w-6 aspect-auto" src="/icon-react.svg" alt="" />
               <img className="w-6 aspect-auto" src="/icon-tailwind.svg" alt="" />
               <img className="w-6 aspect-auto" src="/icon-redux.svg" alt="" />
-              <img className="w-6 aspect-auto" src="/icon-framer.svg" alt="" />
+              <img className="w-6 aspect-auto dark:invert" src="/icon-framer.svg" alt="" />
             </div>
           </div>
         </a>
