@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 
 export const About = () => {
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.75 }} className="p-5 pb-20">
+    <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} className="p-5 pb-20">
       <h1 className="text-2xl font-semibold">About</h1>
-      <div className="flex space-x-6 mt-3">
+      <div className="flex mt-3 space-x-6">
         <div className="flex items-center space-x-2">
           <div className="w-2 h-2 rounded-full bg-[#53ACFF]"></div>
           <p>Little bit story about me and my journey</p>
@@ -28,7 +28,7 @@ export const About = () => {
       <a
         href="/CV.pdf"
         download="CV_I_Wayan_Abi_Widiarta"
-        className="rounded-lg cursor-pointer hover:-translate-y-1 transition hover:shadow-lg hover:shadow-slate-200 flex space-x-4 px-4 py-2 bg-slate-100 border border-gray-300 font-medium mt-4 w-fit text-gray-600"
+        className="flex px-4 py-2 mt-4 space-x-4 font-medium text-gray-600 transition border border-gray-300 rounded-lg cursor-pointer hover:-translate-y-1 hover:shadow-lg hover:shadow-slate-200 bg-slate-100 w-fit"
       >
         <img className="w-5 aspect-auto" src="/icon-download.svg" alt="" />
         <p>My Resume</p>
@@ -41,15 +41,15 @@ export const About = () => {
         <img className="w-8 aspect-auto" src="/icon-tech.png" alt="" />
         <h2 className="text-xl font-semibold">Educations</h2>
       </div>
-      <p className="mt-1 text-md text-gray-600">My Academic Journey </p>
+      <p className="mt-1 text-gray-600 text-md">My Academic Journey </p>
 
-      <div className="mt-8 flex space-x-8">
-        <div className="relative w-6 flex">
+      <div className="flex mt-8 space-x-8">
+        <div className="relative flex w-6">
           <span className="block h-full w-[2px] bg-slate-300 absolute top-0 left-[50%] -translate-x-[50%]"></span>
-          <div className="w-6 h-6 bg-slate-300 rounded-full flex z-20 "></div>
+          <div className="z-20 flex w-6 h-6 rounded-full bg-slate-300 "></div>
         </div>
 
-        <div className="flex items-start space-x-8 pb-16">
+        <div className="flex items-start pb-16 space-x-8">
           <img className="w-20 aspect-auto" src="/balihati.jpeg" alt="" />
           <div className="space-y-2">
             <h2 className="text-lg font-semibold">Bali Hati International School</h2>
@@ -60,17 +60,17 @@ export const About = () => {
       </div>
 
       <div className="flex space-x-8">
-        <div className="relative w-6 flex ">
+        <div className="relative flex w-6 ">
           <span className="block h-full w-[2px] bg-gradient-to-b from-slate-300 to-white absolute top-0 left-[50%] -translate-x-[50%]"></span>
-          <div className="w-6 h-6 bg-slate-300 rounded-full flex z-20 "></div>
+          <div className="z-20 flex w-6 h-6 rounded-full bg-slate-300 "></div>
         </div>
 
-        <div className="flex items-start space-x-8 pb-10">
-          <img className="w-20 scale-150  aspect-auto" src="/telkom.png" alt="" />
+        <div className="flex items-start pb-10 space-x-8">
+          <img className="w-20 scale-150 aspect-auto" src="/telkom.png" alt="" />
           <div className="space-y-2">
             <h2 className="text-lg font-semibold">Telkom University</h2>
             <p>
-              Informatics Faculty <span className="inline-block w-1 rounded-full bg-black h-full"></span> Computer Science GPA : 3.98
+              Informatics Faculty <span className="inline-block w-1 h-full bg-black rounded-full"></span> Computer Science GPA : 3.98
             </p>
             <p>2021 - Present</p>
           </div>
@@ -83,55 +83,55 @@ export const About = () => {
         <img className="w-8 aspect-auto" src="/icon-tech.png" alt="" />
         <h2 className="text-xl font-semibold">Certificates</h2>
       </div>
-      <p className="mt-1 text-md text-gray-600">Certificates I've acquired</p>
+      <p className="mt-1 text-gray-600 text-md">Certificates I've acquired</p>
 
-      <div className="w-full pt-8 flex gap-x-8 gap-y-4 flex-wrap">
+      <div className="flex flex-wrap w-full pt-8 gap-x-8 gap-y-4">
         {/* certificate 1 */}
-        <div className="w-full rounded-lg border border-gray-200 p-5 flex items-start space-x-6">
-          <img className="w-36 rounded-md" src="sertif-js.png" alt="" />
+        <div className="flex items-start w-full p-5 space-x-6 border border-gray-200 rounded-lg">
+          <img className="rounded-md w-36" src="sertif-js.png" alt="" />
 
           <div className="flex flex-col justify-between h-full">
             <div>
               <h3 className="font-medium">Belajar Dasar Pemrograman JavaScript</h3>
               <p className="text-gray-600">Learn the basic of Javascript syntax and concepts</p>
-              <p className="text-gray-600 text-sm">Dicoding</p>
+              <p className="text-sm text-gray-600">Dicoding</p>
             </div>
 
-            <a className="block text-sm hover:opacity-70 transition" target="_blank" href="https://www.dicoding.com/certificates/1OP86J7OQXQK">
+            <a className="block text-sm transition hover:opacity-70" target="_blank" href="https://www.dicoding.com/certificates/1OP86J7OQXQK">
               Read more
             </a>
           </div>
         </div>
 
         {/* certificate 2 */}
-        <div className="w-full rounded-lg border border-gray-200 p-5 flex items-start space-x-6">
-          <img className="w-36 rounded-md" src="sertif-web.png" alt="" />
+        <div className="flex items-start w-full p-5 space-x-6 border border-gray-200 rounded-lg">
+          <img className="rounded-md w-36" src="sertif-web.png" alt="" />
 
           <div className="flex flex-col justify-between h-full">
             <div>
               <h3 className="font-medium">Belajar Dasar Pemrograman Web</h3>
               <p className="text-gray-600">Learn the core concepts of web development including tools and best practices</p>
-              <p className="text-gray-600 text-sm">Dicoding</p>
+              <p className="text-sm text-gray-600">Dicoding</p>
             </div>
 
-            <a className="block text-sm hover:opacity-70 transition" target="_blank" href="https://www.dicoding.com/certificates/JMZVG1MOOZN9">
+            <a className="block text-sm transition hover:opacity-70" target="_blank" href="https://www.dicoding.com/certificates/JMZVG1MOOZN9">
               Read more
             </a>
           </div>
         </div>
 
         {/* certificate 3 */}
-        <div className="w-full rounded-lg border border-gray-200 p-5 flex items-start space-x-6">
-          <img className="w-36 rounded-md" src="sertif-js.png" alt="" />
+        <div className="flex items-start w-full p-5 space-x-6 border border-gray-200 rounded-lg">
+          <img className="rounded-md w-36" src="sertif-js.png" alt="" />
 
           <div className="flex flex-col justify-between h-full">
             <div>
               <h3 className="font-medium">Belajar Membuat Front-End Web untuk Pemula</h3>
               <p className="text-gray-600">Learn the concepts of front-end web development, including DOM manipulation using Javascript</p>
-              <p className="text-gray-600 text-sm">Dicoding</p>
+              <p className="text-sm text-gray-600">Dicoding</p>
             </div>
 
-            <a className="block text-sm hover:opacity-70 transition" target="_blank" href="https://www.dicoding.com/certificates/MRZMDWV60ZYQ">
+            <a className="block text-sm transition hover:opacity-70" target="_blank" href="https://www.dicoding.com/certificates/MRZMDWV60ZYQ">
               Read more
             </a>
           </div>

@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 
 export const Home = () => {
   return (
-    <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.75 }} className="p-5 overflow-hidden pb-20">
+    <motion.div initial={{ opacity: 0, y: -10 }} animate={{ opacity: 1, y: 0 }} transition={{ duration: 1 }} className="p-5 pb-20 overflow-hidden">
       <h1 className="text-2xl font-semibold">Hi There!, I'm Abi Widiarta</h1>
-      <div className="flex space-x-6 mt-3">
+      <div className="flex mt-3 space-x-6">
         <div className="flex items-center space-x-2">
           <div className="relative block mr-2">
             <div className="w-2 h-2 -top-[4px] absolute rounded-full bg-[#00FF94]"></div>
@@ -30,42 +30,42 @@ export const Home = () => {
         <img className="w-8 aspect-auto" src="/icon-tech.png" alt="" />
         <h2 className="text-xl font-semibold">Tech Stacks</h2>
       </div>
-      <p className="mt-1 text-md text-gray-600">Programming Languages and Tools I Used</p>
-      <div className="flex flex-wrap gap-x-6 gap-y-8 pt-8 pb-4">
+      <p className="mt-1 text-gray-600 text-md">Programming Languages and Tools I Used</p>
+      <div className="flex flex-wrap pt-8 pb-4 gap-x-6 gap-y-8">
         <div className="flex items-center space-x-2">
-          <img className="w-6 aspect-auto rounded-md" src="/icon-html.svg" alt="" />
+          <img className="w-6 rounded-md aspect-auto" src="/icon-html.svg" alt="" />
           <p className="font-medium">HTML</p>
         </div>
         <div className="flex items-center space-x-2">
-          <img className="w-6 aspect-auto rounded-md" src="/icon-css.svg" alt="" />
+          <img className="w-6 rounded-md aspect-auto" src="/icon-css.svg" alt="" />
           <p className="font-medium">CSS</p>
         </div>
         <div className="flex items-center space-x-2">
-          <img className="w-6 aspect-auto rounded-md" src="/icon-js.svg" alt="" />
+          <img className="w-6 rounded-md aspect-auto" src="/icon-js.svg" alt="" />
           <p className="font-medium">Javascript</p>
         </div>
         <div className="flex items-center space-x-2">
-          <img className="w-6 aspect-auto rounded-md" src="/icon-react.svg" alt="" />
+          <img className="w-6 rounded-md aspect-auto" src="/icon-react.svg" alt="" />
           <p className="font-medium">React</p>
         </div>
         <div className="flex items-center space-x-2">
-          <img className="w-6 aspect-auto rounded-md" src="/icon-tailwind.svg" alt="" />
+          <img className="w-6 rounded-md aspect-auto" src="/icon-tailwind.svg" alt="" />
           <p className="font-medium">TailwindCSS</p>
         </div>
         <div className="flex items-center space-x-2">
-          <img className="w-6 aspect-auto rounded-md" src="/icon-bootstrap.svg" alt="" />
+          <img className="w-6 rounded-md aspect-auto" src="/icon-bootstrap.svg" alt="" />
           <p className="font-medium">Bootstrap</p>
         </div>
         <div className="flex items-center space-x-2">
-          <img className="w-6 aspect-auto rounded-md" src="/icon-redux.svg" alt="" />
+          <img className="w-6 rounded-md aspect-auto" src="/icon-redux.svg" alt="" />
           <p className="font-medium">Redux</p>
         </div>
         <div className="flex items-center space-x-2">
-          <img className="w-6 aspect-auto rounded-md" src="/icon-laravel.svg" alt="" />
+          <img className="w-6 rounded-md aspect-auto" src="/icon-laravel.svg" alt="" />
           <p className="font-medium">Laravel</p>
         </div>
         <div className="flex items-center space-x-2">
-          <img className="w-6 aspect-auto rounded-md" src="/icon-framer.svg" alt="" />
+          <img className="w-6 rounded-md aspect-auto" src="/icon-framer.svg" alt="" />
           <p className="font-medium">Framer Motion</p>
         </div>
       </div>
@@ -76,19 +76,19 @@ export const Home = () => {
         <img className="w-8 aspect-auto" src="/icon-tech.png" alt="" />
         <h2 className="text-xl font-semibold">Featured Projects</h2>
       </div>
-      <p className="mt-1 text-md text-gray-600">Projects I've created</p>
+      <p className="mt-1 text-gray-600 text-md">Projects I've created</p>
 
-      <div className="w-full pt-8  gap-x-8 gap-y-8 grid grid-cols-2">
+      <div className="grid w-full grid-cols-2 pt-8 gap-x-8 gap-y-8">
         {/* project 1 */}
-        <a href="https://github.com/abi-widiarta/bookrent_laravel" target="_blank" className="flex flex-col shadow-lg shadow-slate-100 rounded-lg border-gray-200 border group overflow-hidden">
-          <img className="object-cover h-44 w-full group-hover:scale-110 transition-all" src="/project-2.png" alt="" />
-          <div className="p-4 flex-1 flex flex-col justify-between">
+        <a href="https://github.com/abi-widiarta/bookrent_laravel" target="_blank" className="flex flex-col overflow-hidden border border-gray-200 rounded-lg shadow-lg shadow-slate-100 group">
+          <img className="object-cover w-full transition-all h-44 group-hover:scale-110" src="/project-2.png" alt="" />
+          <div className="flex flex-col justify-between flex-1 p-4">
             <div>
-              <h3 className="font-semibold mb-2">OpenLibrary Book Rent</h3>
+              <h3 className="mb-2 font-semibold">OpenLibrary Book Rent</h3>
               <p className="text-sm text-gray-500">Website for book renting system in telkom university utilizing Laravel, Tailwind CSS and responsive design</p>
             </div>
 
-            <div className="flex space-x-4 mt-6">
+            <div className="flex mt-6 space-x-4">
               <img className="w-6 aspect-auto" src="/icon-laravel.svg" alt="" />
               <img className="w-6 aspect-auto" src="/icon-tailwind.svg" alt="" />
             </div>
@@ -96,15 +96,15 @@ export const Home = () => {
         </a>
 
         {/* project 2 */}
-        <a href="https://github.com/abi-widiarta/rpl-mytelkomedika" target="_blank" className="flex flex-col shadow-lg shadow-slate-100 rounded-lg border-gray-200 border group overflow-hidden">
-          <img className="object-cover h-44 w-full group-hover:scale-110 transition-all" src="/project-1.png" alt="" />
-          <div className="p-4 flex-1 flex flex-col justify-between">
+        <a href="https://github.com/abi-widiarta/rpl-mytelkomedika" target="_blank" className="flex flex-col overflow-hidden border border-gray-200 rounded-lg shadow-lg shadow-slate-100 group">
+          <img className="object-cover w-full transition-all h-44 group-hover:scale-110" src="/project-1.png" alt="" />
+          <div className="flex flex-col justify-between flex-1 p-4">
             <div>
-              <h3 className="font-semibold mb-2">MyTelkomedika</h3>
+              <h3 className="mb-2 font-semibold">MyTelkomedika</h3>
               <p className="text-sm text-gray-500">Information system website for telkomedika clinic in Telkom University with Laravel and TailwindCSS</p>
             </div>
 
-            <div className="flex space-x-4 mt-6">
+            <div className="flex mt-6 space-x-4">
               <img className="w-6 aspect-auto" src="/icon-laravel.svg" alt="" />
               <img className="w-6 aspect-auto" src="/icon-tailwind.svg" alt="" />
             </div>
@@ -112,15 +112,15 @@ export const Home = () => {
         </a>
 
         {/* project 3 */}
-        <a target="_blank" href="https://github.com/abi-widiarta/react-with-pokeapi" className="flex flex-col shadow-lg shadow-slate-100 rounded-lg border-gray-200 border group overflow-hidden">
-          <img className="object-cover h-44 w-full group-hover:scale-110 transition-all" src="/project-3.png" alt="" />
-          <div className="p-4 flex-1 flex flex-col justify-between">
+        <a target="_blank" href="https://github.com/abi-widiarta/react-with-pokeapi" className="flex flex-col overflow-hidden border border-gray-200 rounded-lg shadow-lg shadow-slate-100 group">
+          <img className="object-cover w-full transition-all h-44 group-hover:scale-110" src="/project-3.png" alt="" />
+          <div className="flex flex-col justify-between flex-1 p-4">
             <div>
-              <h3 className="font-semibold mb-2">Pokemon PokeAPI</h3>
+              <h3 className="mb-2 font-semibold">Pokemon PokeAPI</h3>
               <p className="text-sm text-gray-500">Website that fetched data from PokeAPI with cart system using redux for state management</p>
             </div>
 
-            <div className="flex space-x-4 mt-6">
+            <div className="flex mt-6 space-x-4">
               <img className="w-6 aspect-auto" src="/icon-react.svg" alt="" />
               <img className="w-6 aspect-auto" src="/icon-tailwind.svg" alt="" />
               <img className="w-6 aspect-auto" src="/icon-redux.svg" alt="" />
