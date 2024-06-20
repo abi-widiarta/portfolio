@@ -25,10 +25,14 @@ export const About = () => {
         features into my projects, pushing the boundaries of web design. I am dedicated to staying updated with the latest trends and technologies in front-end development, always striving to deliver innovative and engaging solutions.
       </p>
 
-      <div className="rounded-lg cursor-pointer hover:-translate-y-1 transition hover:shadow-lg hover:shadow-slate-200 flex space-x-4 px-4 py-2 bg-slate-100 border border-gray-300 font-medium mt-4 w-fit text-gray-600">
+      <a
+        href="/CV.pdf"
+        download="CV_I_Wayan_Abi_Widiarta"
+        className="rounded-lg cursor-pointer hover:-translate-y-1 transition hover:shadow-lg hover:shadow-slate-200 flex space-x-4 px-4 py-2 bg-slate-100 border border-gray-300 font-medium mt-4 w-fit text-gray-600"
+      >
         <img className="w-5 aspect-auto" src="/icon-download.svg" alt="" />
         <p>My Resume</p>
-      </div>
+      </a>
 
       <Divider />
 
