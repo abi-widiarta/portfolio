@@ -15,3 +15,20 @@
 ::-webkit-scrollbar-thumb:hover {
   background: #555;
 }
+
+@keyframes rotate {
+  from {
+    transform: rotate(0deg) translate(-50%, -50%);
+  }
+  50% {
+    scale: 1 1.1;
+    transform: translate(-50%, -50%);
+  }
+  to {
+    transform: rotate(360deg) translate(-50%, -50%);
+  }
+}
+
+/* #blob-bg {
+  animation: rotate 4s linear infinite;
+} */

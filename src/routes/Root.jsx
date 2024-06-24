@@ -1,28 +1,55 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import { Link, NavLink, Outlet, useLocation } from "react-router-dom";
 import { AnimatePresence, motion } from "framer-motion";
 
 const Root = () => {
   let { pathname } = useLocation();
   const [isDarkMode, setIsDarkMode] = useState(false);
+  const blobRef = useRef(null);
 
   useEffect(() => {
-    if (isDarkMode) {
+    if (localStorage.getItem("theme") === "dark") {
+      setIsDarkMode(true);
       document.documentElement.classList.add("dark");
-    } else {
+    } else if (localStorage.getItem("theme") === "light") {
+      setIsDarkMode(false);
       document.documentElement.classList.remove("dark");
     }
   }, [isDarkMode]);
 
+  // document.onpointermove = (e) => {
+  //   const { pageX, pageY } = e;
+
+  //   blobRef.current.animate(
+  //     {
+  //       left: `${pageX}px`,
+  //       top: `${pageY}px`,
+  //     },
+  //     {
+  //       duration: 2000,
+  //       fill: "forwards",
+  //     }
+  //   );
+  // };
+
+  // document.onscroll = (e) => {
+  //   // get mouse position
+
+  //   blobRef.current.style.top = `${window.scrollY}px`;
+  // };
+
   return (
     <div className="w-full h-full pt-10 overflow-x-hidden transition-all dark:text-white dark:bg-slate-800">
       <div className="bg-transparent max-w-[1152px]  h-full mx-auto overflow-hidden flex">
-        <article className="max-w-[298px] fixed w-full p-5 ">
+        <article className="max-w-[298px] fixed w-full p-5 dark:z-20">
           <div className="relative flex flex-col items-center w-full">
             {/* theme toggler */}
 
             <div
-              onClick={() => setIsDarkMode(!isDarkMode)}
+              onClick={() => {
+                localStorage.setItem("theme", isDarkMode ? "light" : "dark");
+                setIsDarkMode(!isDarkMode);
+              }}
               className="cursor-pointer absolute top-0 right-0 z-10 flex items-center justify-center w-8 h-8 bg-white dark:bg-slate-800 group inverted-border-radius rounded-bl-xl after:transition-all before:transition-all transition-all dark:after:shadow-[20px_0_0_0_rgba(30,41,59,1)]  after:content-[''] after:absolute after:top-8 after:-right-0 after:h-[50px] after:w-[25px] after:z-0 after:shadow-[20px_0_0_0_rgba(255,255,255,1)]  after:rounded-tr-lg before:content-[''] before:absolute before:top-0  before:-left-6 before:h-[50px] before:w-[25px]  before:z-0 before:shadow-[0_-20px_0_0_rgba(255,255,255,1)] dark:before:shadow-[0_-20px_0_0_rgba(30,41,59,1)]  before:rounded-tr-lg "
             >
               <AnimatePresence>
@@ -122,10 +149,17 @@ const Root = () => {
           </div>
         </article>
 
-        <div className="pl-[298px] overflow-x-hidden">
+        <div className="pl-[298px] overflow-x-hidden dark:z-10">
           <Outlet />
         </div>
       </div>
+
+      {/* <div
+        ref={blobRef}
+        id="blob-bg"
+        style={{ animation: "rotate 4s linear infinite" }}
+        className="absolute -translate-x-[50%] left-[50%] top-[50%] -translate-y-[50%] blur-md w-48 bg-green-500  rounded-full pointer-events-none dark:z-[1] dark:bg-gradient-to-r from-teal-600 to-blue-400 dark:opacity-20 -z-10 aspect-square"
+      ></div> */}
 
       {/* loader */}
       {/* <motion.span initial={{ width: 0 }} animate={{ width: "100%" }} exit={{ opacity: 0 }} transition={{ duration: 0.75, ease: "easeInOut" }} className="fixed top-0 w-full h-2 bg-[#E89AA3]"></motion.span> */}
